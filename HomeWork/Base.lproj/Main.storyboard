@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HomeWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rlW-my-rZo">
+                                <rect key="frame" x="0.0" y="59" width="393" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="dvg-HX-3kp"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6iB-xI-153">
+                                <rect key="frame" x="16" y="488.99999999999994" width="361" height="105.33333333333331"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품 ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hD7-Nl-deY">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품 가격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VZ-z5-t3I">
+                                        <rect key="frame" x="0.0" y="28.333333333333371" width="63.333333333333336" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxi-Bh-vgY">
+                                        <rect key="frame" x="0.0" y="56.666666666666636" width="63.333333333333336" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품 상세설명" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inq-0Y-lWS">
+                                        <rect key="frame" x="0.0" y="85" width="92.666666666666671" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="HEo-AO-Amt">
+                                <rect key="frame" x="16" y="730.33333333333337" width="361" height="87.666666666666629"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gGf-jU-xNa">
+                                        <rect key="frame" x="34.333333333333343" y="0.0" width="292.66666666666663" height="34.333333333333336"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7u-bA-ijh">
+                                                <rect key="frame" x="0.0" y="0.0" width="131.33333333333334" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="위시리시트 담기"/>
+                                                <connections>
+                                                    <action selector="saveWishList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kEN-yj-kOn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwS-cs-qNG">
+                                                <rect key="frame" x="161.33333333333331" y="0.0" width="131.33333333333331" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="다른 상품 보기"/>
+                                                <connections>
+                                                    <action selector="refrshButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Pt-DY-gVh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZZ-NJ-3rd">
+                                        <rect key="frame" x="115.00000000000001" y="53.333333333333258" width="131.33333333333337" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="위시리스트 보기"/>
+                                        <connections>
+                                            <segue destination="jin-FD-GxD" kind="presentation" id="w49-JR-GZl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rlW-my-rZo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0dM-GB-ez6"/>
+                            <constraint firstItem="6iB-xI-153" firstAttribute="top" secondItem="rlW-my-rZo" secondAttribute="bottom" constant="30" id="6Lm-eD-7D9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HEo-AO-Amt" secondAttribute="bottom" id="BEo-wN-Qxl"/>
+                            <constraint firstItem="rlW-my-rZo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DaM-Dg-5e5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HEo-AO-Amt" secondAttribute="trailing" constant="16" id="FJc-df-8Kd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rlW-my-rZo" secondAttribute="trailing" id="HkU-Ha-V29"/>
+                            <constraint firstItem="6iB-xI-153" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jqx-jb-BdA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6iB-xI-153" secondAttribute="trailing" constant="16" id="vVf-oR-i5l"/>
+                            <constraint firstItem="HEo-AO-Amt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wdT-9i-Ikf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="productDescriptions" destination="Inq-0Y-lWS" id="da6-1P-BKq"/>
+                        <outlet property="productID" destination="hD7-Nl-deY" id="1CD-cg-OiD"/>
+                        <outlet property="productImage" destination="rlW-my-rZo" id="ADM-ua-Jyb"/>
+                        <outlet property="productPrice" destination="5VZ-z5-t3I" id="zxs-Kx-x83"/>
+                        <outlet property="productTitle" destination="rxi-Bh-vgY" id="GWz-ez-67K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="843.51145038167931" y="3.5211267605633805"/>
+        </scene>
+        <!--Wish List Table View-->
+        <scene sceneID="sUx-Ha-HiI">
+            <objects>
+                <viewController id="jin-FD-GxD" customClass="WishListTableView" customModule="HomeWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ddg-Ea-e67">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="o9X-Th-aSs">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bhQ-1d-rgw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bhQ-1d-rgw" firstAttribute="trailing" secondItem="o9X-Th-aSs" secondAttribute="trailing" id="2l0-hM-c8n"/>
+                            <constraint firstItem="bhQ-1d-rgw" firstAttribute="bottom" secondItem="o9X-Th-aSs" secondAttribute="bottom" id="XTW-V4-at0"/>
+                            <constraint firstItem="o9X-Th-aSs" firstAttribute="top" secondItem="bhQ-1d-rgw" secondAttribute="top" id="gX8-gb-Odg"/>
+                            <constraint firstItem="o9X-Th-aSs" firstAttribute="leading" secondItem="bhQ-1d-rgw" secondAttribute="leading" id="izd-fS-gi9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="wishList" destination="o9X-Th-aSs" id="AIF-eR-gnN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICV-44-nLJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1733.5877862595419" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
