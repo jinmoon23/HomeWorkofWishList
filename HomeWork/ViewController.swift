@@ -17,7 +17,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet var productDescriptions: UILabel!
     @IBOutlet var productImage: UIImageView!
     
-    
+    var viewModel = DataViewModel()
     let refreshControl = UIRefreshControl()
     
     @IBAction func refrshButton(_ sender: UIButton) {
@@ -29,10 +29,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         //leadData()
     }
     
-    var viewModel = DataViewModel()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         viewControllerFetchData()
         
         scrollView.alwaysBounceVertical = true
@@ -49,7 +48,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             self.viewControllerFetchData()
         }
     }
-        
+    
+        // url의 이미지를 다운받은 후 productImage의 타입에 맞게 변환하는 함수
     func loadImage() {
         if let thumbnailUrlString = self.viewModel.data?.thumbnail, let thumbnailUrl = URL(string: thumbnailUrlString) {
             URLSession.shared.dataTask(with: thumbnailUrl) { data, response, error in
@@ -67,6 +67,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         let randomProduct = number.randomElement() ?? 0
         
         let url = URL(string: "https://dummyjson.com/products/\(randomProduct)")!
+        // DataModel 파일에 정의된 함수 호출
         viewModel.fetchData(from: url) { [weak self] in
             DispatchQueue.main.async {
                 
