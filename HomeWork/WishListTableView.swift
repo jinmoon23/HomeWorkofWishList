@@ -12,12 +12,18 @@ class WishListTableView: UIViewController {
     
     @IBOutlet var wishList: UITableView!
     
+    var persistentContainer: NSPersistentContainer? {
+        (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
+    }
+    
     var wishListItems:[WishList] = []
+    
     
     override func viewDidLoad() {
         wishList.register(UINib(nibName: WishListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: WishListTableViewCell.identifier)
         wishList.dataSource = self
         loadWishList()
+        
     }
     
     func loadWishList() {
@@ -32,6 +38,27 @@ class WishListTableView: UIViewController {
             print("Fetching failed")
         }
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            let productToDelete = wishListItems[indexPath.row]
+            wishListItems.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            guard let context = self.persistentContainer?.viewContext else {return}
+            context.delete(productToDelete)
+            
+            do {
+                try context.save()
+            } catch {
+                print("Error deleting context: \(error.localizedDescription)")
+            }
+        }
+        
+    }
+    
 }
 
 extension WishListTableView: UITableViewDataSource {

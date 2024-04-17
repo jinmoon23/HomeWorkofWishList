@@ -71,12 +71,12 @@
 				CE00429E2BC909E00040070C /* SceneDelegate.swift */,
 				CE0042A02BC909E00040070C /* ViewController.swift */,
 				CE68D6E82BCB62CD00E2E022 /* WishListTableView.swift */,
+				CE0042D22BC93F020040070C /* DataModel.swift */,
 				CE68D6E42BCB624B00E2E022 /* WishListTableViewCell.swift */,
 				CE68D6E52BCB624B00E2E022 /* WishListTableViewCell.xib */,
 				CE0042A22BC909E00040070C /* Main.storyboard */,
 				CE0042A52BC909E30040070C /* Assets.xcassets */,
 				CE0042A72BC909E30040070C /* LaunchScreen.storyboard */,
-				CE0042D22BC93F020040070C /* DataModel.swift */,
 				CE0042AA2BC909E30040070C /* Info.plist */,
 			);
 			path = HomeWork;

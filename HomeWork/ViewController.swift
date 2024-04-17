@@ -8,29 +8,52 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet var productID: UILabel!
     @IBOutlet var productPrice: UILabel!
     @IBOutlet var productTitle: UILabel!
     @IBOutlet var productDescriptions: UILabel!
     @IBOutlet var productImage: UIImageView!
+   
+    let scrollView = UIScrollView()
+    let refreshControl = UIRefreshControl()
     
     @IBAction func refrshButton(_ sender: UIButton) {
-        fetchData()
+        viewControllerFetchData()
     }
     
     @IBAction func saveWishList(_ sender: UIButton) {
         saveData()
-        //        leadData()
+        //leadData()
     }
     
     var viewModel = DataViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchData()
+        viewControllerFetchData()
+        scrollView.frame = view.bounds
+        scrollView.contentSize = CGSize(width: view.bounds.width, height: view.bounds.height)
+        scrollView.alwaysBounceVertical = true
+        scrollView.delegate = self
+        
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        scrollView.refreshControl = refreshControl
+        
+        view.addSubview(scrollView)
     }
+    
+    @objc func refresh() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.refreshControl.endRefreshing()
+            self.viewControllerFetchData()
+        }
+    }
+    
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        viewControllerFetchData()
+//    }
     
     func loadImage() {
         if let thumbnailUrlString = self.viewModel.data?.thumbnail, let thumbnailUrl = URL(string: thumbnailUrlString) {
@@ -43,7 +66,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func fetchData() {
+    func viewControllerFetchData() {
         
         let number = 1...100
         let randomProduct = number.randomElement() ?? 0
@@ -93,6 +116,7 @@ class ViewController: UIViewController {
         
         try? context.save()
     }
+    
     //
     //    func leadData() {
     //        guard let context = self.persistentContainer?.viewContext else {return}

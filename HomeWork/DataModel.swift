@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DataModel: Codable {
+struct DataModel: Decodable {
     let id: Int
     let title: String
     let price: Double
@@ -34,7 +34,6 @@ class DataViewModel {
     func fetchData(from url: URL, completion: @escaping () -> Void) {
         state = .loading
         URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
-            
             if let error = error {
                    self?.error = .networkError
                    self?.state = .error
