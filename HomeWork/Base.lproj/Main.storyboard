@@ -16,41 +16,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rlW-my-rZo">
-                                <rect key="frame" x="0.0" y="59" width="393" height="400"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="dvg-HX-3kp"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6iB-xI-153">
-                                <rect key="frame" x="16" y="488.99999999999994" width="361" height="105.33333333333331"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihA-1p-cjg">
+                                <rect key="frame" x="0.0" y="59" width="393" height="671.33333333333337"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품 ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hD7-Nl-deY">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품 가격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VZ-z5-t3I">
-                                        <rect key="frame" x="0.0" y="28.333333333333371" width="63.333333333333336" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxi-Bh-vgY">
-                                        <rect key="frame" x="0.0" y="56.666666666666636" width="63.333333333333336" height="20.333333333333336"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품 상세설명" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inq-0Y-lWS">
-                                        <rect key="frame" x="0.0" y="85" width="92.666666666666671" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BKc-4q-DxC">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="671"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6iB-xI-153">
+                                                <rect key="frame" x="25" y="425" width="343" height="105.33333333333337"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품 ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hD7-Nl-deY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품 가격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VZ-z5-t3I">
+                                                        <rect key="frame" x="0.0" y="28.333333333333371" width="63.333333333333336" height="20.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxi-Bh-vgY">
+                                                        <rect key="frame" x="0.0" y="56.666666666666636" width="63.333333333333336" height="20.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품 상세설명" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inq-0Y-lWS">
+                                                        <rect key="frame" x="0.0" y="85" width="92.666666666666671" height="20.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rlW-my-rZo">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="400"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="400" id="O8G-VJ-WeM"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="rlW-my-rZo" firstAttribute="top" secondItem="BKc-4q-DxC" secondAttribute="top" id="EYz-k4-Yjj"/>
+                                            <constraint firstItem="6iB-xI-153" firstAttribute="leading" secondItem="BKc-4q-DxC" secondAttribute="leading" constant="25" id="PGp-s8-5Px"/>
+                                            <constraint firstAttribute="trailing" secondItem="rlW-my-rZo" secondAttribute="trailing" id="ULd-Sd-2Ki"/>
+                                            <constraint firstAttribute="bottom" secondItem="6iB-xI-153" secondAttribute="bottom" constant="140.66999999999999" id="bmC-tj-OYd"/>
+                                            <constraint firstItem="rlW-my-rZo" firstAttribute="leading" secondItem="BKc-4q-DxC" secondAttribute="leading" id="kcf-ai-rma"/>
+                                            <constraint firstItem="6iB-xI-153" firstAttribute="top" secondItem="rlW-my-rZo" secondAttribute="bottom" constant="25" id="qQT-st-R96"/>
+                                            <constraint firstAttribute="trailing" secondItem="6iB-xI-153" secondAttribute="trailing" constant="25" id="uQs-uv-Lcy"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="BKc-4q-DxC" firstAttribute="top" secondItem="4oG-3H-Zwd" secondAttribute="top" id="93g-dS-ft6"/>
+                                    <constraint firstItem="BKc-4q-DxC" firstAttribute="width" secondItem="ihA-1p-cjg" secondAttribute="width" id="DYA-Y2-oSF"/>
+                                    <constraint firstItem="BKc-4q-DxC" firstAttribute="bottom" secondItem="4oG-3H-Zwd" secondAttribute="bottom" id="Ktw-hA-AJD"/>
+                                    <constraint firstItem="BKc-4q-DxC" firstAttribute="leading" secondItem="4oG-3H-Zwd" secondAttribute="leading" id="LU0-pG-cHd"/>
+                                    <constraint firstItem="BKc-4q-DxC" firstAttribute="trailing" secondItem="4oG-3H-Zwd" secondAttribute="trailing" id="Wx9-Ms-nAJ"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="4oG-3H-Zwd"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="tOk-nS-EFE"/>
+                            </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="HEo-AO-Amt">
                                 <rect key="frame" x="16" y="730.33333333333337" width="361" height="87.666666666666629"/>
                                 <subviews>
@@ -89,14 +118,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rlW-my-rZo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0dM-GB-ez6"/>
-                            <constraint firstItem="6iB-xI-153" firstAttribute="top" secondItem="rlW-my-rZo" secondAttribute="bottom" constant="30" id="6Lm-eD-7D9"/>
+                            <constraint firstItem="HEo-AO-Amt" firstAttribute="top" secondItem="ihA-1p-cjg" secondAttribute="bottom" id="7oo-RV-tOn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HEo-AO-Amt" secondAttribute="bottom" id="BEo-wN-Qxl"/>
-                            <constraint firstItem="rlW-my-rZo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DaM-Dg-5e5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HEo-AO-Amt" secondAttribute="trailing" constant="16" id="FJc-df-8Kd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rlW-my-rZo" secondAttribute="trailing" id="HkU-Ha-V29"/>
-                            <constraint firstItem="6iB-xI-153" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jqx-jb-BdA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6iB-xI-153" secondAttribute="trailing" constant="16" id="vVf-oR-i5l"/>
+                            <constraint firstItem="ihA-1p-cjg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gbY-dC-gmF"/>
+                            <constraint firstItem="ihA-1p-cjg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rf0-kF-Whk"/>
+                            <constraint firstItem="ihA-1p-cjg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tP0-yc-iun"/>
                             <constraint firstItem="HEo-AO-Amt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wdT-9i-Ikf"/>
                         </constraints>
                     </view>
@@ -106,6 +133,7 @@
                         <outlet property="productImage" destination="rlW-my-rZo" id="ADM-ua-Jyb"/>
                         <outlet property="productPrice" destination="5VZ-z5-t3I" id="zxs-Kx-x83"/>
                         <outlet property="productTitle" destination="rxi-Bh-vgY" id="GWz-ez-67K"/>
+                        <outlet property="scrollView" destination="ihA-1p-cjg" id="iyU-73-20O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -10,13 +10,14 @@ import CoreData
 
 class ViewController: UIViewController, UIScrollViewDelegate {
     
+    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var productID: UILabel!
     @IBOutlet var productPrice: UILabel!
     @IBOutlet var productTitle: UILabel!
     @IBOutlet var productDescriptions: UILabel!
     @IBOutlet var productImage: UIImageView!
-   
-    let scrollView = UIScrollView()
+    
+    
     let refreshControl = UIRefreshControl()
     
     @IBAction func refrshButton(_ sender: UIButton) {
@@ -33,15 +34,13 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewControllerFetchData()
-        scrollView.frame = view.bounds
-        scrollView.contentSize = CGSize(width: view.bounds.width, height: view.bounds.height)
+        
         scrollView.alwaysBounceVertical = true
         scrollView.delegate = self
         
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         scrollView.refreshControl = refreshControl
         
-        view.addSubview(scrollView)
     }
     
     @objc func refresh() {
@@ -50,11 +49,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             self.viewControllerFetchData()
         }
     }
-    
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        viewControllerFetchData()
-//    }
-    
+        
     func loadImage() {
         if let thumbnailUrlString = self.viewModel.data?.thumbnail, let thumbnailUrl = URL(string: thumbnailUrlString) {
             URLSession.shared.dataTask(with: thumbnailUrl) { data, response, error in
@@ -128,3 +123,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     //}
 }
 
+//#Preview {
+//    ViewController()
+//}
