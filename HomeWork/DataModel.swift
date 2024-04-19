@@ -39,7 +39,7 @@ class DataViewModel {
                    self?.state = .error
                    print("Network Error: \(error.localizedDescription)")
                } else if let data = data {
-                   do {
+                   do { // url을 받아와 JSON data를 Swift타입으로 변환한다.
                        self?.data = try JSONDecoder().decode(DataModel.self, from: data)
                        self?.state = .success
                    } catch {

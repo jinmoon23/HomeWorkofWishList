@@ -49,7 +49,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-        // url의 이미지를 다운받은 후 productImage의 타입에 맞게 변환하는 함수
+        // url의 이미지를 다운받은 후 productImage 컴포넌트(UIImage)의 타입에 맞게 변환하는 함수
     func loadImage() {
         if let thumbnailUrlString = self.viewModel.data?.thumbnail, let thumbnailUrl = URL(string: thumbnailUrlString) {
             URLSession.shared.dataTask(with: thumbnailUrl) { data, response, error in
@@ -67,6 +67,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         let randomProduct = number.randomElement() ?? 0
         
         let url = URL(string: "https://dummyjson.com/products/\(randomProduct)")!
+        
         // DataModel 파일에 정의된 함수 호출
         viewModel.fetchData(from: url) { [weak self] in
             DispatchQueue.main.async {
@@ -81,12 +82,16 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                         self?.productID.text = "상품 코드: \(String(productID))"
                     }
                     //                    print(self?.productID.text)
+                    
                     self?.productTitle.text = self?.viewModel.data?.title
+                    
                     if let productPrice = self?.viewModel.data?.price {
                         self?.productPrice.text = "이 상품의 가격은 \(String(productPrice))$ 입니다."
                     }
                     //                    print(self?.productPrice.text)
+                    
                     self?.productDescriptions.text = self?.viewModel.data?.description
+                    
                     self?.productImage.image = self?.viewModel.data?.thumbnail as? UIImage
                 case .error:
                     break

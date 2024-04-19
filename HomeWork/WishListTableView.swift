@@ -16,7 +16,7 @@ class WishListTableView: UIViewController {
         (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
     }
     
-    var wishListItems:[WishList] = []
+    var wishListItems: [WishList] = []
     
     
     override func viewDidLoad() {
@@ -39,6 +39,7 @@ class WishListTableView: UIViewController {
             print("Fetching failed")
         }
     }
+    
     // UI인 cell을 스와이프해서 삭제하고 해당하는 셀의 CoreData도 삭제하는 함수
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
